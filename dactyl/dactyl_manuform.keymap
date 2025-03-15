@@ -1,0 +1,78 @@
+/*
+ * Copyright (c) 2021 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/outputs.h>
+
+// choose to prioritize BLE or USB
+#define OUT_BLE
+// #define OUT_USB
+
+#define DEFAULT 0
+#define MOTIONS 1
+#define NUMBERS 2
+
+/ {
+    keymap {
+        compatible =  "zmk,keymap" ;
+
+        default_layer {
+// --------------------------------------------------------------------------------------------------------------------------------
+// | ESC   |  1  |  2  |   3   |  4  |  5  |                   ---                |  6    |  7    |  8    |  9   | 0  |    BKSP   |
+// | TAB   |  Q  |  W  |   E   |  R  |  T  |   (   |           ---        |  )    |  Y    |  U    |  I    |  O   | P  |     -     |
+// | CTRL  |  A  |  S  |   D   |  F  |  G  |   [   |           ---        |  ]    |  H    |  J    |  K    |  L   | ;  |     '     |
+// | SHIFT |  Z  |  X  |   C   |  V  |  B  | PG_UP | PG_DOWN | --- | HOME | END   |  N    |  M    |  ,    |  .   | /  | SHFT(RET) |
+// | CRTL  | ALT | GUI | LOWER |    GUI    | LOWER | SPACE   | --- | DEL  | SPACE |     RAISE     | LEFT  | DOWN | UP |   RIGHT   |
+bindings = <
+
+
+&kp ESC     &kp N1      &kp N2      &kp N3      &kp N4      &kp N5              &kp N6      &kp N7      &kp N8     &kp N9       &kp N0      &kp MINUS
+
+&kp TAB     &kp Q       &kp W       &kp E       &kp R       &kp T               &kp Y       &kp U       &kp I      &kp O        &kp P       &kp BSLH
+
+&kp LCTRL   &kp A       &kp S       &kp D       &kp F       &kp G               &kp H       &kp J       &kp K      &kp L        &kp SEMI    &kp APOS
+
+&kp LSHFT   &kp Z       &kp X       &kp C       &kp V       &kp B               &kp N       &kp M       &kp COMMA  &kp DOT      &kp FSLH    &kp RSHFT
+
+&kp GRAVE   &kp EQUAL   &kp ENTER   &kp SPACE   &kp LCTRL   &kp LALT            &kp PG_DN   &kp PG_UP   &kp BSPC   &lt MOTIONS DEL &kp LBKT &kp RBKT
+
+&none       &none       &none       &none       &none       &none               &kp HOME    &kp END     &none      &none        &none       &none
+
+
+                >;
+        };
+
+motions_layer {
+// --------------------------------------------------------------------------------------------------------------------------------
+// | ESC   |  1  |  2  |   3   |  4  |  5  |                   ---                |  6    |  7    |  8    |  9   | 0  |    BKSP   |
+// | TAB   |  Q  |  W  |   E   |  R  |  T  |   (   |           ---        |  )    |  Y    |  U    |  I    |  O   | P  |     -     |
+// | CTRL  |  A  |  S  |   D   |  F  |  G  |   [   |           ---        |  ]    |  H    |  J    |  K    |  L   | ;  |     '     |
+// | SHIFT |  Z  |  X  |   C   |  V  |  B  | PG_UP | PG_DOWN | --- | HOME | END   |  N    |  M    |  ,    |  .   | /  | SHFT(RET) |
+// | CRTL  | ALT | GUI | LOWER |    GUI    | LOWER | SPACE   | --- | DEL  | SPACE |     RAISE     | LEFT  | DOWN | UP |   RIGHT   |
+bindings = <
+
+
+&kp ESC     &kp N1      &kp N2      &kp N3      &kp N4      &kp N5              &kp N6      &kp N7      &kp N8     &kp N9       &kp N0      &kp MINUS
+
+&kp TAB     &kp Q       &kp W       &kp E       &kp R       &kp T               &kp Y       &kp U       &kp I      &kp O        &kp P       &kp BSLH
+
+&kp LCTRL   &kp A       &kp S       &kp D       &kp F       &kp G               &kp H       &kp J       &kp K      &kp L        &kp SEMI    &kp APOS
+
+&kp LSHFT   &kp Z       &kp X       &kp C       &kp V       &kp B               &kp N       &kp M       &kp COMMA  &kp DOT      &kp FSLH    &kp RSHFT
+
+&kp GRAVE   &kp EQUAL   &kp ENTER   &kp SPACE   &kp LCTRL   &kp LALT            &kp PG_DN   &kp PG_UP   &kp BSPC   &lt MOTIONS DEL &kp LBKT &kp RBKT
+
+&none       &none       &none       &none       &none       &none               &kp HOME    &kp END     &none      &none        &none       &none
+
+
+                >;
+        };
+
+    };
+};
