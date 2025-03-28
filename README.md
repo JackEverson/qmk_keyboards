@@ -1,6 +1,24 @@
 # QMK_Keyboards
  A repository holding information, code, and configurations for my keyboards using QMK firmware. 
 
+ This repo is designed to be placed in the keyboard folder of the QMK firmware source code so it can be used directly with the example commands.
+
+# Commands 
+Building firmware for a keyboard
+```
+qmk compile -kb <keyboard> -km <keymap>
+```
+
+for example 2_bongo keyboard using the sound layout
+```
+qmk compile -kb qmk_keyboards/2_bongo -km sound
+```
+
+Flashing software to micro controller
+```
+qmk flash -kb <my_keyboard> -km <my_keymap>
+```
+
 # Keyboards
 
 ## Dactyl keyboard 
@@ -19,21 +37,5 @@
 ![20230220_161814](https://user-images.githubusercontent.com/111256162/220501778-74e25547-a3d0-4bc1-a29b-1218343e7bb3.jpg)
 
 
-# Commands 
-Building firmware for a keyboard
-```
-qmk compile -kb <keyboard> -km <keymap>
-```
-
-for example redox/rev1 default layout
-```
-qmk compile -kb redox/rev1 -km default
-```
-
-
-Flashing software to micro controller
-```
-qmk flash -kb <my_keyboard> -km <my_keymap>
-```
 # License
 Please note that while my repo is free to take and do what ever you want with, the [QMK](https://github.com/qmk/qmk_firmware) firmware repository holds a different license and rules.
