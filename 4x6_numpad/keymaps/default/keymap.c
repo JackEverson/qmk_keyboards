@@ -3,6 +3,7 @@
 
 #include QMK_KEYBOARD_H
 
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     
 
@@ -24,3 +25,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_KP_0,            KC_KP_DOT,          TG(1),              KC_NO   // 0, ., macro1, macro2
     ),
 };
+
+#if defined(ENCODER_MAP_ENABLE)
+const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
+    [0] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  },
+    [1] = { ENCODER_CCW_CW(MS_WHLU, MS_WHLD) },
+};
+#endif
