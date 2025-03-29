@@ -4,7 +4,7 @@
 
 *A short description of the keyboard/project*
 
-* Keyboard Maintainer: [Jack Everson](https://github.com/Jack Everson)
+* Keyboard Maintainer: [Jack Everson](https://github.com/JackEverson)
 * Hardware Supported: *The PCBs, controllers supported*
 * Hardware Availability: *Links to where you can find this hardware*
 

@@ -4,21 +4,23 @@
 #include QMK_KEYBOARD_H
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    /*
-     * ┌───┬───┬───┬───┬───┬───┐
-     * │Tab│ Q │ W │ E │ R │ T │
-     * ├───┼───┼───┼───┼───┼───┤
-     * │Bsp│ A │ S │ D │ F │ G │
-     * ├───┼───┼───┼───┼───┼───┤
-     * │Sft│ Z │ X │ C │ V │ B │
-     * ├───┼───┼───┼───┼───┼───┤
-     * │Ctl│App│GUI│Alt│Spc│Spc│
-     * └───┴───┴───┴───┴───┴───┘
-     */
+    
+
     [0] = LAYOUT_ortho_4x6(
-        KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,
-        KC_BSPC, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,
-        KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,
-        KC_LCTL, KC_MENU, KC_LGUI, KC_LALT, KC_SPC,  KC_SPC
-    )
+        KC_NO,              KC_NO,              KC_NO,              KC_NO,    
+        KC_NUM_LOCK,        KC_KP_SLASH,        KC_KP_ASTERISK,     KC_KP_MINUS,
+        KC_KP_7,            KC_KP_8,            KC_KP_9,            KC_KP_PLUS,
+        KC_KP_4,            KC_KP_5,            KC_KP_6,            KC_MUTE,    // Volume Mute
+        KC_KP_1,            KC_KP_2,            KC_KP_3,            KC_KP_ENTER,
+        KC_KP_0,            KC_KP_DOT,          TG(1),              KC_NO   // 0, ., macro1, macro2
+    ),
+
+    [1] = LAYOUT_ortho_4x6(
+        KC_NO,              KC_NO,              KC_NO,              KC_NO,    
+        KC_NUM_LOCK,        KC_KP_SLASH,        KC_KP_ASTERISK,     KC_KP_MINUS,
+        KC_KP_7,            KC_KP_8,            KC_KP_9,            KC_KP_PLUS,
+        KC_KP_4,            KC_KP_5,            KC_KP_6,            KC_MUTE,    // Volume Mute
+        KC_KP_1,            KC_KP_2,            KC_KP_3,            KC_KP_ENTER,
+        KC_KP_0,            KC_KP_DOT,          TG(1),              KC_NO   // 0, ., macro1, macro2
+    ),
 };
