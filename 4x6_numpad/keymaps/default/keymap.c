@@ -14,7 +14,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_KP_7,            KC_KP_8,            KC_KP_9,            KC_KP_PLUS,
         KC_KP_4,            KC_KP_5,            KC_KP_6,            KC_MUTE,    // Volume Mute
         KC_KP_1,            KC_KP_2,            KC_KP_3,            KC_KP_ENTER,
-        KC_KP_0,            KC_KP_DOT,          TG(1),              KC_NO   // 0, ., macro1, macro2
+        KC_KP_0,            KC_KP_DOT,          TG(1),              KC_CAPS   // 0, ., macro1, macro2
     ),
 
     [1] = LAYOUT_ortho_4x6(
@@ -23,7 +23,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_KP_7,            KC_KP_8,            KC_KP_9,            KC_KP_PLUS,
         KC_KP_4,            KC_KP_5,            KC_KP_6,            KC_MUTE,    // Volume Mute
         KC_KP_1,            KC_KP_2,            KC_KP_3,            KC_KP_ENTER,
-        KC_KP_0,            KC_KP_DOT,          TG(1),              KC_NO   // 0, ., macro1, macro2
+        KC_KP_0,            KC_KP_DOT,          TG(1),              KC_CAPS  // 0, ., macro1, macro2
     ),
 };
 
